@@ -12,11 +12,12 @@ startup
 update
 {
 	vars.doSplit = false;
-	if (current.level > vars.oldLevel)
+	if (current.level != vars.oldLevel)
 	{
 		vars.doSplit = true;
 		vars.oldLevel = current.level;
 	}
+	vars.oldLevel = current.level;
 }
 
 split
